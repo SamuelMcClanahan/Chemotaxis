@@ -2,8 +2,8 @@
 Bacteria[] bug;  
  void setup()   
  {     
- 	size (600, 600);
-	bug = new Bacteria[400];
+ 	size (1000, 1000);
+	bug = new Bacteria[500];
 	for (int i = 0; i < bug.length; i++)
 	{
 		bug[i] = new Bacteria();
@@ -32,8 +32,8 @@ Bacteria[] bug;
 
 	Bacteria()
 	{
-		myX = (int)(Math.random() * 600);
-		myY = (int)(Math.random() * 600);
+		myX = (int)(Math.random() * 1000);
+		myY = (int)(Math.random() * 1000);
 		int b = (int)(Math.random() * 256);
 		int r = (int)(Math.random() * 256);
 		int g = (int)(Math.random() * 256);
@@ -59,26 +59,26 @@ void move()
 {
 	if (mousePressed) {
 		if (myX > mouseX)
-		myX -= (int)(Math.random() * 5) - 1;
+		myX -= (int)(Math.random() * 100) - 1;
 	else
-		myX += (int)(Math.random() * 5) - 1;
+		myX += (int)(Math.random() * 100) - 1;
 
 	if (myY < mouseY)
-		myY += (int)(Math.random() * 5)  -1;
+		myY += (int)(Math.random() * 100)  -1;
 	
 	else 
-		myY -= (int)(Math.random() * 5) - 1;
+		myY -= (int)(Math.random() * 100) - 1;
 	}
 	else
 	{
 	if (myX < mouseX)
-		myX += (int)(Math.random() * 5) - 1;
+		myX += (int)(Math.random() * 100) - 1;
 	else 
-		myX -= (int)(Math.random() * 5) - 1;
+		myX -= (int)(Math.random() * 100) - 1;
 	if (myY < mouseY)
-		myY -= (int)(Math.random() * 5) - 1;
+		myY -= (int)(Math.random() * 100) - 1;
 	else 
-		myY += (int)(Math.random() * 5) - 1;
+		myY += (int)(Math.random() * 100) - 1;
 	}
 
  }    	
