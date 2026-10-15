@@ -13,6 +13,11 @@ Bacteria[] bug;
  void draw()   
  {    
 	background (15, 15, 40);
+	fill (255, 255, 0);
+	textSize(20);
+	textAlign(CENTER);
+	text("Move the mouse to attract the bacteria", width/2, 30);
+	text("Bacteria: " + bug.length, width / 2, 55);
 	for (int i = 0; i < bug.length; i++)
 	{
 		bug[i].show();
@@ -52,7 +57,29 @@ void show()
 
 void move()
 {
-	myX += (int)(Math.random() * 3) - 1;
-	myY += (int)(Math.random() * 3) - 1;
+	if (mousePressed) {
+		if (myX > mouseX)
+		myX -= (int)(Math.random() * 5) - 1;
+	else
+		myX += (int)(Math.random() * 5) - 1;
+
+	if (myY < mouseY)
+		myY += (int)(Math.random() * 5)  -1;
+	
+	else 
+		myY -= (int)(Math.random() * 5) - 1;
+	}
+	else
+	{
+	if (myX < mouseX)
+		myX += (int)(Math.random() * 5) - 1;
+	else 
+		myX -= (int)(Math.random() * 5) - 1;
+	if (myY < mouseY)
+		myY -= (int)(Math.random() * 5) - 1;
+	else 
+		myY += (int)(Math.random() * 5) - 1;
+	}
+
  }    	
 }
